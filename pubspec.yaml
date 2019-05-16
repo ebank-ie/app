@@ -1,0 +1,9 @@
+name: ebank.ie
+description: ebank.ie app
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
