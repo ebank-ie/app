@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
+import 'package:ebank.ie/theme.dart';
 import 'package:ebank.ie/home.dart';
 
 Future<Null> main() async {
@@ -14,8 +15,8 @@ class EbankApp extends StatelessWidget {
     return new MaterialApp(
       title: 'ebank.ie',
       theme: new ThemeData(
-        primaryColor: new Color(0xff00ff00),
-        accentColor: new Color(0xff00ffff),
+        primaryColor: primaryColor,
+        accentColor: accentColor,
       ),
       debugShowCheckedModeBanner: false,
       home: new Home(),

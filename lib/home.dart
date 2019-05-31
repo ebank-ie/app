@@ -1,3 +1,4 @@
+import 'package:ebank.ie/theme.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -10,11 +11,44 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text("ebank.ie"),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("ebank.ie"),
       ),
-      body: new Text("initial version, nothing to see here yet"),
+      body: Column(
+        children: <Widget>[
+          Container(
+            decoration: BoxDecoration(
+              color: offWhite,
+              borderRadius: BorderRadius.circular(spacing),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black12,
+                  blurRadius: spacing,
+                ),
+                BoxShadow(
+                  color: Colors.black12,
+                  blurRadius: 1,
+                )
+              ],
+            ),
+            margin: EdgeInsets.all(spacing),
+            padding: EdgeInsets.all(spacing),
+            alignment: Alignment.center,
+            child: Column(
+              children: <Widget>[
+                Text(
+                  "Balance",
+                ),
+                Text(
+                  "€10",
+                  textScaleFactor: 3,
+                  ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
